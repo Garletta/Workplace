@@ -1,2 +1,0 @@
-# Workplace
-My workplace
