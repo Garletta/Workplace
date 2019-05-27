@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>searchBooksByName.jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsps/searchBooksByName.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchBooksByName.jsp</servlet-name>
+        <url-pattern>/searchBooksByName.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>searchBooksByNameServlet</servlet-name>
+        <servlet-class>servlets.searchBooksByNameServlet</servlet-class>
+        <init-param>
+            <param-name>DriverClassName</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/books?characterEncoding=UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>UserName</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Password</param-name>
+            <param-value>bingjie123</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searchBooksByNameServlet</servlet-name>
+        <url-pattern>/searchBooksByNameServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>addCartServlet</servlet-name>
+        <servlet-class>servlets.addCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addCartServlet</servlet-name>
+        <url-pattern>/addCartServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteCartServlet</servlet-name>
+        <servlet-class>servlets.deleteCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteCartServlet</servlet-name>
+        <url-pattern>/deleteCartServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>showCart.jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsps/showCart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>showCart.jsp</servlet-name>
+        <url-pattern>/showCart.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/htmls/index.html</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu2"
+        android:title="搜索"
+        app:actionLayout="@layout/linear"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/menu0"
+        android:title="设置"
+        app:showAsAction="ifRoom|withText">
+        <menu>
+            <item
+                android:id="@+id/menu1"
+                android:title="专业设置" />
+        </menu>
+    </item>
+</menu>
